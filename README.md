@@ -2,7 +2,7 @@
 
 + Installation
    ```bash
-   cd ~ && wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/set && chmod +x * && bash set
+   cd ~ && rm -rf set && wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/set && chmod +x * && bash set
    ```
 + Use 
    ```bash
