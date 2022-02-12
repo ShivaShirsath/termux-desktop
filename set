@@ -67,10 +67,11 @@ mkdir $HOME/.backup
 mv $HOME/.config $HOME/.backup
 mv $HOME/.vnc $HOME/.backup
 cd $HOME
-wget https://github.com/ShivaShirsath/termux-desktop/raw/main/data.tar.xz
+wget https://github.com/Yisus7u7/termux-desktop-xfce/releases/download/desktop-5.0.3/data.tar.xz
 tar -xvf data.tar.xz
-mv data/.config .
-mv data/.vnc .
+rm -rf .config
+wget 
+tar -xvf .config.tar.xz
 
 PWDx=$PWD
 cd $HOME
