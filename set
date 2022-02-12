@@ -54,8 +54,8 @@ PWDx=$PWD
 cd /data/data/com.termux/files/usr/share/
 wget https://github.com/ShivaShirsath/termux-desktop/raw/main/icons.tar.xz
 wget https://github.com/ShivaShirsath/termux-desktop/raw/main/themes.tar.xz
-tar -xvf icons
-tar -xvf themes
+tar -xvf icons.tar.xz
+tar -xvf themes.tar.xz
 cd /data/data/com.termux/files/usr/share/backgrounds
 wget https://github.com/ShivaShirsath/termux-desktop/raw/main/bg_android.jpg
 cd $PWDx
