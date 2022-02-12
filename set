@@ -1,0 +1,103 @@
+#!/data/data/com.termux/files/usr/bin/env bash
+
+clear
+
+# This script will configure a graphical user interface
+# (xfce4) in termux
+# Creator : @ShivaShirsath
+cd $HOME
+
+echo -e '\e[1;36m Installing packages, it is necessary\e[1m'
+echo ''
+echo -e '\e[1;31m Download speed depends on your internet connection \e[1m'
+
+sleep 1
+
+clear
+
+echo -e '\e[1;36m Installing xfce4 and basic apps...\e[1m'
+
+sleep 1
+
+apt update -y && apt upgrade -y
+apt install -y wget
+rm /data/data/com.termux/files/usr/etc/apt/sources.list.d/termux-desktop-xfce.list
+wget -P /data/data/com.termux/files/usr/etc/apt/sources.list.d https://raw.githubusercontent.com/Yisus7u7/termux-desktop-xfce/gh-pages/termux-desktop-xfce.list
+apt install -y x11-repo
+apt update -y
+apt install -y xfce4 xfce4-goodies termux-desktop-xfce openjdk-17 florence otter-browser fish 
+
+echo "Setting Config..."
+rm -rf $HOME/.backup
+mkdir $HOME/.backup
+mv $HOME/.config $HOME/.backup
+mv $HOME/.vnc $HOME/.backup
+cd $HOME
+wget https://github.com/ShivaShirsath/termux-desktop/raw/main/data.tar.xz
+tar -xvf data.tar.xz
+rm data.tar.xz
+
+echo "setup folders..."
+
+mkdir $HOME/Desktop 
+mkdir $HOME/Downloads 
+mkdir $HOME/Templates 
+mkdir $HOME/Public 
+mkdir $HOME/Documents 
+mkdir $HOME/Pictures 
+mkdir $HOME/Videos 
+termux-setup-storage
+
+# ln -s $HOME/storage/shared/AppProjects AppProjects
+
+pkg install git -y
+
+rm -rf /data/data/com.termux/files/usr/share/icons
+rm -rf /data/data/com.termux/files/usr/share/themes
+rm -rf /data/data/com.termux/files/usr/share/backgrounds
+
+mkdir /data/data/com.termux/files/usr/share/icons
+mkdir /data/data/com.termux/files/usr/share/themes
+mkdir /data/data/com.termux/files/usr/share/backgrounds
+
+PWDx=$PWD
+cd $HOME
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+cd WhiteSur-gtk-theme
+chmod +x *
+./install.sh -d /data/data/com.termux/files/usr/share/themes -c dark -a all -t orange -s 180 -HD --round --dialog
+cd $PWDx
+
+PWDx=$PWD
+cd $HOME
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
+cd WhiteSur-icon-theme
+chmod +x *
+bash install.sh -d /data/data/com.termux/files/usr/share/icons -t orange -b --black
+cd $PWDx
+
+PWDx=$PWD
+cd $HOME
+git clone https://github.com/vinceliuice/WhiteSur-cursors.git
+cd WhiteSur-cursors
+chmod +x *
+cp -pr dist /data/data/com.termux/files/usr/share/icons/WhiteSur-cursors
+cd $PWDx
+
+PWDx=$PWD
+cd /data/data/com.termux/files/usr/share/backgrounds
+wget #
+cd $PWDx
+
+PWDx=$PWD
+cd $HOME
+rm -rf VNC
+mkdir VNC
+cd VNC
+
+#
+
+bash install
+cd $PWDx
+
+exit
