@@ -48,8 +48,6 @@ rm -rf /data/data/com.termux/files/usr/share/icons
 rm -rf /data/data/com.termux/files/usr/share/themes
 rm -rf /data/data/com.termux/files/usr/share/backgrounds
 
-mkdir /data/data/com.termux/files/usr/share/icons
-mkdir /data/data/com.termux/files/usr/share/themes
 mkdir /data/data/com.termux/files/usr/share/backgrounds
 
 PWDx=$PWD
