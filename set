@@ -88,7 +88,8 @@ mv $HOME/.vnc $HOME/.backup
 cd $HOME
 wget https://github.com/ShivaShirsath/termux-desktop/raw/main/data.tar.xz
 tar -xvf data.tar.xz
-rm data.tar.xz
+mv data/.config .
+mv data/.vnc .
 
 PWDx=$PWD
 cd $HOME
