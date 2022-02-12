@@ -96,10 +96,16 @@ rm -rf VNC
 mkdir VNC
 cd VNC
 
-#
+wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/VNC/install
+wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/VNC/launchVNC
+wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/VNC/progress
+wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/VNC/uninstall
+wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/VNC/vnc
 
+chmod +x *
 
 bash install
+
 cd $PWDx
 
 exit

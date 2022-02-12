@@ -34,11 +34,12 @@ killall Xvnc
 
 
 cp -rf vnc /data/data/com.termux/files/usr/bin/vnc
+cp -rf launchVNC /data/data/com.termux/files/usr/bin/launchVNC
 echo -e "
  ${c}vnc ${y}copied to ${c}/data/data/com.termux/files/usr/bin/vnc
 "
 
-chmod +x /data/data/com.termux/files/usr/bin/vnc
+chmod +x /data/data/com.termux/files/usr/bin/*
 echo -e "
  ${g}Executable ${r}Permission ${y}is set to ${c}vnc
 "
