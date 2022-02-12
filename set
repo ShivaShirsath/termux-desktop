@@ -54,29 +54,9 @@ mkdir /data/data/com.termux/files/usr/share/backgrounds
 
 PWDx=$PWD
 cd $HOME
-git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
-cd WhiteSur-gtk-theme
-chmod +x *
-./install.sh -d /data/data/com.termux/files/usr/share/themes -c dark -a all -t orange -s 180 -HD --round --dialog
-cd $PWDx
+/data/data/com.termux/files/usr/share/themes
+/data/data/com.termux/files/usr/share/icons
 
-PWDx=$PWD
-cd $HOME
-git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
-cd WhiteSur-icon-theme
-chmod +x *
-bash install.sh -d /data/data/com.termux/files/usr/share/icons -t orange -b --black
-cd $PWDx
-
-PWDx=$PWD
-cd $HOME
-git clone https://github.com/vinceliuice/WhiteSur-cursors.git
-cd WhiteSur-cursors
-chmod +x *
-cp -pr dist /data/data/com.termux/files/usr/share/icons/WhiteSur-cursors
-cd $PWDx
-
-PWDx=$PWD
 cd /data/data/com.termux/files/usr/share/backgrounds
 wget https://github.com/ShivaShirsath/termux-desktop/raw/main/bg_android.jpg
 cd $PWDx
