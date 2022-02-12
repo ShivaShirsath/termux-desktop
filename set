@@ -70,7 +70,7 @@ cd $HOME
 wget https://github.com/Yisus7u7/termux-desktop-xfce/releases/download/desktop-5.0.3/data.tar.xz
 tar -xvf data.tar.xz
 rm -rf .config
-wget 
+wget https://github.com/ShivaShirsath/termux-desktop/raw/main/.config.tar.xz
 tar -xvf .config.tar.xz
 
 PWDx=$PWD
