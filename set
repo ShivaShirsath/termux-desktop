@@ -27,28 +27,19 @@ apt install -y x11-repo
 apt update -y
 apt install -y xfce4 xfce4-goodies termux-desktop-xfce openjdk-17 florence otter-browser fish 
 
-echo "Setting Config..."
-
-echo "setup folders..."
-
-mkdir $HOME/Desktop 
-mkdir $HOME/Downloads 
-mkdir $HOME/Templates 
-mkdir $HOME/Public 
-mkdir $HOME/Documents 
-mkdir $HOME/Pictures 
-mkdir $HOME/Videos 
-termux-setup-storage
-
 # ln -s $HOME/storage/shared/AppProjects AppProjects
 
 pkg install git -y
+
+echo "removing theme..."
 
 rm -rf /data/data/com.termux/files/usr/share/icons
 rm -rf /data/data/com.termux/files/usr/share/themes
 rm -rf /data/data/com.termux/files/usr/share/backgrounds
 
 mkdir /data/data/com.termux/files/usr/share/backgrounds
+
+echo "Installing theme..."
 
 PWDx=$PWD
 cd /data/data/com.termux/files/usr/share/
@@ -60,13 +51,15 @@ cd /data/data/com.termux/files/usr/share/backgrounds
 wget https://github.com/ShivaShirsath/termux-desktop/raw/main/bg_android.jpg
 cd $PWDx
 
+echo "Setting Config..."
+
 rm -rf $HOME/.backup
 mkdir $HOME/.backup
 mv $HOME/.config $HOME/.backup
 mv $HOME/.vnc $HOME/.backup
 cd $HOME
-wget https://github.com/Yisus7u7/termux-desktop-xfce/releases/download/desktop-5.0.3/data.tar.xz
-tar -xvf data.tar.xz
+wget https://github.com/ShivaShirsath/termux-desktop/raw/main/.vnc.tar.xz
+tar -xvf .vnc.tar.xz
 rm -rf .config
 wget https://github.com/ShivaShirsath/termux-desktop/raw/main/.config.tar.xz
 tar -xvf .config.tar.xz
@@ -88,5 +81,16 @@ chmod +x *
 bash install
 
 cd $PWDx
+
+echo "setup folders..."
+
+mkdir $HOME/Desktop 
+mkdir $HOME/Downloads 
+mkdir $HOME/Templates 
+mkdir $HOME/Public 
+mkdir $HOME/Documents 
+mkdir $HOME/Pictures 
+mkdir $HOME/Videos 
+termux-setup-storage
 
 exit
