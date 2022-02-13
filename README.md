@@ -1,4 +1,4 @@
-# termux-desktop
+<h1 align=center>termux-desktop</h1>
 
 ![]()
 
