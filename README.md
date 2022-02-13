@@ -2,6 +2,8 @@
 
 ![]()
 
+## TermUX  [⍗](https://play.google.com/store/apps/details?id=com.termux)      [⇱](https://f-droid.org/en/packages/com.termux)
+
 + Installation
    ```bash
    cd ~ && rm -rf set && wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/set && chmod +x * && bash set
