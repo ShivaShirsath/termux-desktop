@@ -2,7 +2,9 @@
 
 ![]()
 
-## TermUX  [⍗](https://play.google.com/store/apps/details?id=com.termux)      [⇱](https://f-droid.org/en/packages/com.termux)
++ Install TermUX
+   - [‣](https://play.google.com/store/apps/details?id=com.termux)
+   - [⇱⍗](https://f-droid.org/en/packages/com.termux)
 
 + Installation
    ```bash
