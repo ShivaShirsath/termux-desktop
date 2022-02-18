@@ -11,7 +11,7 @@
 
 + Installation
    ```bash
-   cd ~ && rm -rf set && wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/set && chmod +x * && bash set
+   pkg install -y wget && cd ~ && rm -rf set && wget https://raw.githubusercontent.com/ShivaShirsath/termux-desktop/main/set && chmod +x * && bash set
    ```
 + Use 
    ```bash
